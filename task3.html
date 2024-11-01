@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Email Formatter</title>
+</head>
+<body>
+    <h1>Email Formatter</h1>
+    <input type="text" id="firstName" placeholder="First Name">
+    <input type="text" id="lastName" placeholder="Last Name">
+    <button onclick="formatEmail()">Format Email</button>
+    <p id="emailResult"></p>
+
+    <script>
+        function formatEmail() {
+            const firstName = document.getElementById('firstName').value.toLowerCase();
+            const lastName = document.getElementById('lastName').value.toLowerCase();
+            const email = `${firstName}.${lastName}@gmail.com`;
+
+            document.getElementById('emailResult').innerText = email;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>String Manipulations</title>
+</head>
+<body>
+    <h1>Basic String Tasks</h1>
+
+    <input type="text" id="userInput" placeholder="Enter text here">
+    <button onclick="convertToUpper()">Uppercase</button>
+    <button onclick="convertToLower()">Lowercase</button>
+    <button onclick="reverseString()">Reverse String</button>
+    <button onclick="countVowels()">Count Vowels</button>
+
+    <p id="result"></p>
+
+    <script>
+        function convertToUpper() {
+            const input = document.getElementById('userInput').value;
+            document.getElementById('result').innerText = input.toUpperCase();
+        }
+
+        function convertToLower() {
+            const input = document.getElementById('userInput').value;
+            document.getElementById('result').innerText = input.toLowerCase();
+        }
+
+        function reverseString() {
+            const input = document.getElementById('userInput').value;
+            document.getElementById('result').innerText = input.split('').reverse().join('');
+        }
+
+        function countVowels() {
+            const input = document.getElementById('userInput').value;
+            const match = input.match(/[aeiouAEIOU]/g);
+            const count = match ? match.length : 0;
+            document.getElementById('result').innerText = 'Number of vowels: ' + count;
+        }
+    </script>
+</body>
+</html>

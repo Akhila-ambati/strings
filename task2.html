@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Username Validation</title>
+</head>
+<body>
+    <h1>Username Validation</h1>
+    <input type="text" id="usernameInput" placeholder="Enter username">
+    <button onclick="validateUsername()">Validate</button>
+    <p id="validationMessage"></p>
+
+    <script>
+        function validateUsername() {
+            const username = document.getElementById('usernameInput').value;
+            const message = document.getElementById('validationMessage');
+            
+            if (username.length >= 5 && username.length <= 15) {
+                message.innerText = 'Username is valid';
+                message.style.color = 'green';
+            } else {
+                message.innerText = 'Username must be between 5 and 15 characters';
+                message.style.color = 'red';
+            }
+        }
+    </script>
+</body>
+</html>
